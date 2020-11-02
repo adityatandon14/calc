@@ -1,0 +1,315 @@
+#ag3 {
+  margin-left: 235px;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 17px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 350px;
+  height: 25px;
+  width: 25px;
+  background-color: #cdcdcd;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#sub {
+  margin-top: 30px;
+  margin-left: 460px;
+  color: white;
+  background: red;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#npat {
+  margin-top: 30px;
+  margin-left: 120px;
+  color: white;
+  background: green;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.error {
+  visibility: hidden;
+  color: red;
+}
+/* label{
+    border: 1px solid black;
+} */
+.units {
+  margin-left: 285px;
+}
+.measure {
+  margin-left: 35px;
+}
+.not_app {
+  background-color: #e7e7e7;
+  margin-left: 124px;
+}
+.not_app_fr {
+  background-color: #e7e7e7;
+  margin-left: 54px;
+}
+.not_app_tr {
+  background-color: #e7e7e7;
+  margin-left: 40px;
+}
+.not_app_ldh {
+  background-color: #e7e7e7;
+  margin-left: 56px;
+}
+.not_app_dd {
+  background-color: #e7e7e7;
+  margin-left: 37px;
+}
+.not_app_crp {
+  background-color: #e7e7e7;
+  margin-left: 49px;
+}
+.not_app_cpk {
+  background-color: #e7e7e7;
+  margin-left: 56px;
+}
+.not_ct {
+  background-color: #e7e7e7;
+  margin-left: 124px;
+}
+.not_apg {
+  background-color: #e7e7e7;
+  margin-left: 122px;
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.9) {
+  #ag3 {
+    margin-left: 60px;
+  }
+  .container {
+    font-size: 15px;
+  }
+  .para_name {
+    font-size: 13.5px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 25px;
+    width: 25px;
+    background-color: #cdcdcd;
+  }
+  #sub {
+    margin-top: 2%;
+    margin-left: 35px;
+    color: white;
+    background: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #npat {
+    margin-top: 2%;
+    margin-left: 65px;
+    color: white;
+    background: green;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .error {
+    visibility: hidden;
+    color: red;
+  }
+  label {
+    font-size: 0.7rem;
+  }
+  .units {
+    display: none;
+    margin-left: 65%;
+  }
+  .measure {
+    display: none;
+    margin-left: 7%;
+  }
+  .not_app {
+    margin-left: 19px;
+  }
+  .not_app_fr {
+    margin-left: 20px;
+  }
+  .not_app_tr {
+    margin-left: 19px;
+  }
+  .not_app_ldh {
+    margin-left: 21px;
+  }
+  .not_app_dd {
+    margin-left: 20px;
+  }
+  .not_app_crp {
+    margin-left: 23px;
+  }
+  .not_app_cpk {
+    margin-left: 23px;
+  }
+  .not_ct {
+    margin-left: 16px;
+  }
+  .not_apg {
+    margin-left: 20px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  #ag3 {
+    margin-left: 120px;
+  }
+  .container {
+    font-size: 15px;
+  }
+  .para_name {
+    font-size: 14.5px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 25px;
+    width: 25px;
+    background-color: #cdcdcd;
+  }
+  #sub {
+    margin-top: 2%;
+    margin-left: 55px;
+    color: white;
+    background: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #npat {
+    margin-top: 2%;
+    margin-left: 85px;
+    color: white;
+    background: green;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .error {
+    visibility: hidden;
+    color: red;
+  }
+  label {
+    font-size: 0.7rem;
+  }
+  .units {
+    display: none;
+    margin-left: 65%;
+  }
+  .measure {
+    display: none;
+    margin-left: 7%;
+  }
+  .not_app {
+    margin-left: 30px;
+  }
+  .not_app_fr {
+    margin-left: 29.8px;
+  }
+  .not_app_tr {
+    margin-left: 29.4px;
+  }
+  .not_app_ldh {
+    margin-left: 29px;
+  }
+  .not_app_dd {
+    margin-left: 30px;
+  }
+  .not_app_crp {
+    margin-left: 8.8%;
+  }
+  .not_app_cpk {
+    margin-left: 30px;
+  }
+  .not_ct {
+    margin-left: 30px;
+  }
+  .not_apg {
+    margin-left: 32px;
+  }
+}

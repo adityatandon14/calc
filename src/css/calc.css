@@ -1,0 +1,516 @@
+/* body{
+    background-color: lightcyan;
+} */
+h3 {
+  margin-left: 70px;
+  font-family: "Montserrat", sans-serif;
+  opacity: 1.5;
+}
+.ruby {
+  margin: 20px;
+  font-size: medium;
+}
+.box1 {
+  margin-left: 30%;
+  text-align: left;
+}
+.box1 input {
+  text-align: right;
+}
+.box2 {
+  
+  text-align: left;
+}
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+.navbar {
+  color: #3c4d5f;
+  height: 80px;
+  background-color: white;
+  margin: 0;
+
+  text-align: center;
+}
+
+a:visited {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+pre {
+  white-space: pre-wrap;
+}
+#contact {
+  margin-left: 70px;
+}
+.text-container {
+  position: absolute;
+  top: 13%;
+  background-color: white;
+  height: 300px;
+  width: 1503px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.Center_txt {
+  margin-top: 90px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.information {
+  box-shadow: 0 0 15px;
+  background-color: white;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-top: 15px;
+}
+.para-container {
+  display: inline-flex;
+  width: 90%;
+  margin-top: 20px;
+  margin: 40px;
+  text-align: center;
+}
+
+::placeholder {
+  color: white;
+}
+.para_name {
+  font-size: 17px;
+}
+.vital-container {
+  background-color: white;
+  box-shadow: 0 0 15px #999;
+  border-radius: 20px;
+  margin-left: 10px;
+  width: 400px;
+}
+.vital {
+  margin-left: 10px;
+}
+#rr {
+  margin-left: 8px;
+}
+#hr {
+  margin-left: 64.8px;
+}
+#sp {
+  margin-left: 127px;
+}
+.vital-container > h1 {
+  text-align: center;
+}
+.lab-findings {
+  background-color: white;
+  box-shadow: 0 0 15px #999;
+  margin-left: 10px;
+  border-radius: 20px;
+  width: 550px;
+}
+.lab {
+  margin-left: 10px;
+}
+#dd {
+  margin-left: 17px;
+}
+#cpk {
+  margin-left: 40px;
+}
+#crp {
+  margin-left: 40px;
+}
+#ldh {
+  margin-left: 39px;
+}
+#tr {
+  margin-left: 11px;
+}
+#fr {
+  margin-left: 22px;
+}
+#alc {
+  margin-left: 12px;
+}
+#ct {
+  margin-left: 7px;
+}
+#apg {
+  margin-left: 40px;
+}
+.epidem-container {
+  background-color: white;
+  border-radius: 20px;
+  width: 530px;
+  -moz-box-shadow: 0 0 5px #999;
+  -webkit-box-shadow: 0 0 5px #999;
+  box-shadow: 0 0 15px #999;
+  /* height: 620px; */
+  margin-left: 2px;
+}
+.epidem {
+  margin-left: 10px;
+}
+.epidem-container > h1 {
+  text-align: center;
+}
+.head {
+  color: red;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+}
+.heading {
+  margin-top: 0px;
+  font-size: 50px;
+  color: red;
+  /* text-shadow: 5px 5px blue; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+}
+
+#sub {
+  background-color: #3c4d5f;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: rosybrown;
+  display: inline-block;
+  display: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  display: center;
+  left: 40%;
+}
+#npat {
+  background-color: #3c4d5f;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: rosybrown;
+  display: inline-block;
+  display: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  right: 30%;
+}
+.btype {
+  text-align: center;
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.9) {
+  * {
+    box-sizing: border-box;
+  }
+
+  #contact {
+    margin-left: 10px;
+    width: auto;
+  }
+  .text-container {
+    position: absolute;
+    top: 65px;
+    background-color: white;
+    height: 260px;
+    width: auto;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .Center_txt {
+    margin-top: 8%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .information {
+    box-shadow: 0 0 15px;
+    background-color: white;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin-top: 15px;
+  }
+  .para-container {
+    display: flex;
+    flex-direction: column;
+    left: 30%;
+  }
+  .container {
+    text-align: left;
+  }
+  ::placeholder {
+    color: dimgrey;
+  }
+  .epidem-container {
+    background-color: white;
+    border: 1px solid black;
+    width: 103%;
+    margin-left: 30%;
+    height: 30%;
+  }
+  .epidem {
+    margin-left: 30%;
+  }
+  .epidem-container > h1 {
+    text-align: left;
+  }
+  .head {
+    text-shadow: red;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+  }
+  .heading {
+    font-size: 35px;
+    text-shadow: red;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+  }
+  .vital-container {
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 1%;
+    margin-left: 30%;
+    width: 103%;
+  }
+  .vital {
+    margin-left: 30%;
+  }
+  #rr {
+    margin-left: 2px;
+  }
+  #hr {
+    margin-left: 45px;
+  }
+  #sp {
+    margin-left: 95px;
+  }
+  .vital-container > h1 {
+    text-align: center;
+  }
+  .lab-findings {
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 1%;
+    width: 103%;
+    margin-left: 30%;
+  }
+  .lab {
+    margin-left: 30%;
+  }
+  #dd {
+    margin-left: 5px;
+  }
+  #cpk {
+    margin-left: 20px;
+  }
+  #crp {
+    margin-left: 20px;
+  }
+  #ldh {
+    margin-left: 20px;
+  }
+  #tr {
+    margin-left: 2px;
+  }
+  #fr {
+    margin-left: 10px;
+  }
+  #alc {
+    margin-left: 3px;
+  }
+  #ct {
+    margin-left: 2px;
+  }
+  #apg {
+    margin-left: 23px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    position: absolute;
+  }
+  #contact {
+    margin-left: 10px;
+    width: auto;
+  }
+  .text-container {
+    position: absolute;
+    top: 10%;
+    background-color: white;
+    height: 260px;
+    width: auto;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .Center_txt {
+    margin-top: 7%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .information {
+    box-shadow: 0 0 15px;
+    background-color: white;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin-top: 15px;
+  }
+  .para-container {
+    display: flex;
+    flex-direction: column;
+  }
+  ::placeholder {
+    color: dimgrey;
+  }
+  .epidem-container {
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    margin-left: 30%;
+    height: 30%;
+  }
+  .epidem {
+    margin-left: 30%;
+  }
+  .epidem-container > h1 {
+    text-align: center;
+  }
+  .head {
+    text-shadow: red;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+  }
+  .heading {
+    font-size: 40px;
+    text-shadow: red;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+  }
+  .vital-container {
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 1%;
+    margin-left: 30%;
+    width: 100%;
+  }
+  .vital {
+    margin-left: 30%;
+  }
+  #rr {
+    margin-left: 14px;
+  }
+  #hr {
+    margin-left: 63px;
+  }
+  #sp {
+    margin-left: 115px;
+  }
+  .vital-container > h1 {
+    text-align: center;
+  }
+  .lab-findings {
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 1%;
+    width: 100%;
+    margin-left: 30%;
+  }
+  .lab {
+    margin-left: 10px;
+    text-align: left;
+  }
+  #dd {
+    margin-left: 25px;
+  }
+  #cpk {
+    margin-left: 44px;
+  }
+  #crp {
+    margin-left: 45.5px;
+  }
+  #ldh {
+    margin-left: 43.5px;
+  }
+  #tr {
+    margin-left: 20px;
+  }
+  #fr {
+    margin-left: 31px;
+  }
+  #alc {
+    margin-left: 20px;
+  }
+  #ct {
+    margin-left: 16px;
+  }
+  #apg {
+    margin-left: 43px;
+  }
+}
+.information {
+  background-color: black;
+  color: white;
+}
+.footer {
+  text-align: center;
+}
+
+.head {
+  background-color: #3c4d5f;
+  color: lightgray;
+}
+.head:hover {
+  background-color: white;
+}
+
+.Analytics {
+  right: 10%;
+  left: 10%;
+  background-color: #e9ecef;
+  border-radius: 25px;
+  margin: 5%;
+}
+.technicaldetails {
+  background-color: #6f7174;
+  border-radius: 25px;
+  margin: 5%;
+}
+.epidem {
+  text-align: left;
+}
+.lab {
+  text-align: left;
+}
+
+.vital {
+  text-align: left;
+}
+
+.para-container > * {
+  flex: auto auto auto;
+  margin: 10%;
+  width: 100%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.putto {
+  background-color: #e9ecef;
+  border-radius: 25px;
+}
+/* .box1 {
+}
+.box2 {
+} */
+ /* select[multiple]{
+  background-color: #fff;
+  border: 1px solid #f4f6f9;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px #dbdde1;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.8335em;
+  padding: 0.5556666667em;
+  transition: border-color 150ms ease-in-out;
+  width: 40%;
+  height: 58px;
+} */

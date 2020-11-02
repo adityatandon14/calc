@@ -1,0 +1,15 @@
+.hidden {
+    display: none;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  .lab{
+      text-align: center;
+  }
+  .h1{
+    color:white;
+    background-color: white;
+    
+  }

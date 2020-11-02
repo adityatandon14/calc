@@ -1,0 +1,33 @@
+.container-fluid{
+    margin: 10%;
+    text-align: center;
+    
+    align-content: center;
+    margin: auto;
+    border: 1px solid  #232f3e;
+    
+    
+}
+.mainabout{
+    margin-left: 20%;
+    margin-right:20%;
+    text-align: center;
+}
+.mainabout h1{
+    margin-left: 16%;
+}
+.tex{
+    margin-left: 20%;
+    margin-right:20%;
+}
+img{
+    border-radius: 50%;
+    width: 40%;
+    padding:10px;
+}
+img.clear {
+    clear: both;
+  }
+#don{
+    margin-bottom: 20px;
+}
