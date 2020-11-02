@@ -193,14 +193,14 @@ export class Calculator extends Component {
     const hidden = this.state.checked ? "" : "hidden";
     return (
       
-      <div>
+      <div className="jupiter" >
         {/* &lt; */}
         <title>Risk Calculator</title>
         <div className="full">
-          <div className="navbar">
+          <div className="titlo">
             <h1>RISK CALCULATOR</h1>
           </div>
-          <div className="Image-container">
+          <div className="Image-container container">
             
             <div className="putto">
               <h4>
@@ -216,8 +216,8 @@ export class Calculator extends Component {
 
           
           <form onSubmit={this.handleSubmit} className="form">
-            <div className="para-container">
-              <div className="epidem-container col-md-6 col-sm-12 width=30% ">
+            <div className="para-container mars">
+              <div className="epidem-container col-md-9 col-sm-12 width=50% ">
                 <h1 className="head">EPIDEMIOLOGY</h1>
 
                 <div className="yoyo">
@@ -289,7 +289,7 @@ export class Calculator extends Component {
 
                 <div className={hidden}>
                   <div className="lab">
-                    <div className="col-3 col-md-2 mb-1">
+                    <div >
                       <h1 className="head">LABORATORY FINDINGS</h1>
                       <div className="box2">
                       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -323,7 +323,7 @@ export class Calculator extends Component {
                         <br />
                         
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
+                        <label className="para_name md-col-4">
                           CPK:
                           <span className="error" id="sage" color="red">
                           *
@@ -331,12 +331,14 @@ export class Calculator extends Component {
                          </label>
                       
                           <input
+                          className="md-col-6"
                             type="number"
                             id="cpk"
                             required
                             onChange={this.handleLabFindings}
                           />
                           <select
+                          className="md-col-2"
                             id="measure_cpk"
                             name="measure"
                             onChange={this.handleChange}
@@ -449,18 +451,20 @@ export class Calculator extends Component {
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
+                        <label className="para_name md-col-4">
                           Absolute LC:
                           <span className="error" id="sage" color="red">
                             *
                           </span>
                         </label>
                           <input
+                          className="md-col-6"
                             type="number"
                             id="absolute"
                             onChange={this.handleLabFindings}
                           />
                           <select
+                          className="md-col-2"
                             id="measure_abg"
                             name="measure"
                             onChange={this.handleChange}

@@ -38,14 +38,14 @@ export class aboutus extends Component {
                     </div>
           <h5 className="headline__sub-head">FOUNDINNG MEMBERS</h5>
           <div className="row">
-         
+            
             <img
               src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
               class="col-md-3 col-12"
               margin="10px"
             />
             <span className="team">AMITABH1</span>
-            
+           
             <img
               src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
               class="col-md-3 col-12"

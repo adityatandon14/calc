@@ -20,6 +20,20 @@ h3 {
 .box2 {
   
   text-align: left;
+  display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+.jupiter{
+  align-items: center;
+  display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+.mars{
+  display: flex; 
+    flex-direction: column; 
+    align-items: center;
 }
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 .navbar {

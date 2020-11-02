@@ -93,22 +93,22 @@ const Header=()=> {
                     <Nav navbar>
                         <NavItem className='rout' key="1" onClick={toggleFalse}>
                             <Link className="nav-link" to="/HOME">
-                                <span className="fa fa-home fa-lg">Home</span> 
+                                <span className="fa fa-home fa-lg"> Home</span> 
                             </Link>
                         </NavItem>  
                         <NavItem className='rout' key="1" onClick={toggleFalse}>
                             <Link className="nav-link" to="/LOGIN">
-                                <span className="fa fa-sign-in">LOGIN</span> 
+                                <span className="fa fa-sign-in"> LOGIN</span> 
                             </Link>
                         </NavItem>                  
                         <NavItem className='rout' key="3" onClick={toggleFalse}>
                             <Link className="nav-link" to="/TEAM" color="grey">
-                                <span className="fa fa-users">TEAM</span> 
+                                <span className="fa fa-users"> TEAM</span> 
                             </Link>
                         </NavItem>
                         <NavItem className='rout' key="4" onClick={toggleFalse}>
                             <Link className="nav-link" to="/CALCULATOR">
-                                <span className="fa fa-calculator">CALCULATOR </span> 
+                                <span className="fa fa-calculator"> CALCULATOR </span> 
                             </Link>
                         </NavItem>
                         <NavItem className='rout' key="2" onClick={toggleFalse}>
