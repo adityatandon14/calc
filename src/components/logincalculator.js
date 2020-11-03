@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
 /*api */
 const MOCK_SERVICE = "http://e5986a2d38a5.ngrok.io/api/trial/";
 /*api ka name and defining all parameter*/
-export class loginalculator extends Component {
+export class logincalculator extends Component {
   // const classes = useStyles();
   constructor() {
     super();
@@ -212,6 +212,8 @@ export class loginalculator extends Component {
           <div className="titlo">
             <h1>RISK CALCULATOR</h1>
           </div>
+          <br/>
+          <br/>
           <div className="Image-container container">
             <div className="putto">
               <h4>
@@ -224,12 +226,14 @@ export class loginalculator extends Component {
               </h4>
             </div>
           </div>
+          <br/>
+          <br/>
           <div className="forms">
             <form className="loadform">
               <div className="insideload">
                 <h2 style={{ fontSize: "15px" }}>LOAD EXISTING PATIENT</h2>
                 <div className="top">
-                  <label style={{ fontSize: "10px" }}>PT ID</label>
+                  <label style={{ fontSize: "10px" }}>LOAD PT ID</label>
                   <input
                     className="input"
                     type="text"
@@ -238,7 +242,8 @@ export class loginalculator extends Component {
                     // onChange={this.handleChange}
                   />
                 </div>
-                <br />
+                
+                {/*
                 <label style={{ fontSize: "10px" }}>PASSWORD</label>
                 <input
                   className="input"
@@ -246,8 +251,8 @@ export class loginalculator extends Component {
                   name="username"
                   // onChange={this.handleChange}
                 />
-
-                <br />
+                */}
+               <br/>
 
                 <button
                   className="loadbutton"
@@ -262,7 +267,7 @@ export class loginalculator extends Component {
               <div className="insidenewpat">
                 <h2 style={{ fontSize: "15px" }}>NEW PATIENT</h2>
                 <div className="top">
-                  <label style={{ fontSize: "10px" }}>PT ID</label>
+                  <label style={{ fontSize: "10px" }}>NEW PT ID</label>
                   <input
                     className="input"
                     type="text"
@@ -282,6 +287,7 @@ export class loginalculator extends Component {
               </div>
             </form>
           </div>
+
 
           <form onSubmit={this.handleSubmit} className="form">
             <div className="para-container mars">
@@ -560,7 +566,7 @@ export class loginalculator extends Component {
                           <label className="para_name">ABG :(P / F)</label>
 
                           <input
-                            className="ind"
+                            className="ind8"
                             type="number"
                             id="abg"
                             onChange={this.handleLabFindings}
@@ -605,7 +611,7 @@ export class loginalculator extends Component {
             </marquee>
           </a>
 
-          <div className="information">
+          <div className="information container">
             <p>
               Moderate and high risk patients require aggressive monitoring of
               inflammatory milieu or up triaging. Anti-inflammatory therapy with

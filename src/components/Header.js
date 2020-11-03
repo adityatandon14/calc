@@ -86,7 +86,7 @@ const Header=()=> {
     return (
         <React.Fragment>
             <Navbar dark expand="md" >
-                <div className="container"> 
+                <div className="container navbar"> 
                     <NavbarToggler onClick={toggleNav} />             
                     <NavbarBrand className="mr-auto" href="/"><div className="home-title">RISK CALCULATOR</div></NavbarBrand> 
                     <Collapse isOpen={panel} navbar>                            
@@ -96,21 +96,24 @@ const Header=()=> {
                                 <span className="fa fa-home fa-lg"> Home</span> 
                             </Link>
                         </NavItem>  
+                        {/*
                         <NavItem className='rout' key="1" onClick={toggleFalse}>
                             <Link className="nav-link" to="/LOGIN">
                                 <span className="fa fa-sign-in"> LOGIN</span> 
                             </Link>
-                        </NavItem>                  
+                        </NavItem>    
+                        */}   
+                        <NavItem className='rout' key="4" onClick={toggleFalse}>
+                            <Link className="nav-link" to="/LOGIN">
+                                <span className="fa fa-calculator"> CALCULATOR </span> 
+                            </Link>
+                        </NavItem>           
                         <NavItem className='rout' key="3" onClick={toggleFalse}>
                             <Link className="nav-link" to="/TEAM" color="grey">
                                 <span className="fa fa-users"> TEAM</span> 
                             </Link>
                         </NavItem>
-                        <NavItem className='rout' key="4" onClick={toggleFalse}>
-                            <Link className="nav-link" to="/CALCULATOR">
-                                <span className="fa fa-calculator"> CALCULATOR </span> 
-                            </Link>
-                        </NavItem>
+                        
                         <NavItem className='rout' key="2" onClick={toggleFalse}>
                             <Link className="nav-link" to="/APPRAISAL">
                                 <span className="fa fa-gift"> APPRICIATION</span>

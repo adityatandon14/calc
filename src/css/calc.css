@@ -11,8 +11,7 @@ h3 {
   font-size: medium;
 }
 .box1 {
-  margin-left: 30%;
-  text-align: left;
+  
 }
 .box1 input {
   text-align: right;
@@ -80,7 +79,7 @@ pre {
 .para-container {
   display: inline-flex;
   width: 90%;
-  margin-top: 20px;
+  margin-top: 10px;
   margin: 40px;
   text-align: center;
 }
@@ -123,7 +122,7 @@ pre {
 .lab {
   margin-left: 10px;
 }
-#dd {
+/* #dd {
   margin-left: 17px;
 }
 #cpk {
@@ -149,7 +148,7 @@ pre {
 }
 #apg {
   margin-left: 40px;
-}
+} */
 .epidem-container {
   background-color: white;
   border-radius: 20px;
@@ -310,7 +309,7 @@ pre {
   .lab {
     margin-left: 30%;
   }
-  #dd {
+  /* #dd {
     margin-left: 5px;
   }
   #cpk {
@@ -336,7 +335,7 @@ pre {
   }
   #apg {
     margin-left: 23px;
-  }
+  } */
 }
 @media (-webkit-min-device-pixel-ratio: 3) {
   * {
@@ -434,7 +433,7 @@ pre {
     margin-left: 10px;
     text-align: left;
   }
-  #dd {
+  /* #dd {
     margin-left: 25px;
   }
   #cpk {
@@ -460,7 +459,7 @@ pre {
   }
   #apg {
     margin-left: 43px;
-  }
+  } */
 }
 .information {
   background-color: black;
@@ -505,7 +504,7 @@ pre {
   flex: auto auto auto;
   margin: 10%;
   width: 100%;
-  margin-top: 3%;
+  margin-top: 10px;
   margin-bottom: 3%;
 }
 .putto {
@@ -531,47 +530,74 @@ pre {
   height: 58px;
 } */
 .information {
-  background-color: black;
+  background-color: #77828f;
+  color: white;
+}
+.ptor{
   color: white;
 }
 .cbbt{
   width:50%;
 }
 .ind{
-  margin-left:4%;
+  margin-left:3.9%;
 }
 .ind1{
-  margin-left:6%;
-}
-.ind2{
   margin-left:8%;
 }
+.ind2{
+  margin-left:9%;
+}
 .ind3{
-  margin-left:5%;
+  margin-left:7.5%;
 }
 .ind4{
-  margin-left:2%;
+  margin-left:2.2%;
 }
 .ind5{
-  margin-left:5%;
+  margin-left:4%;
 }
 .ind6{
-  margin-left:5%;
+  margin-left:6%;
 }
 .ind7{
-  margin-left:3%;
+  margin-left:10%;
+  height: 28px ; 
+}
+#measure_ctscan{
+  height: 28px;
+}
+.ind8{
+  margin-left:-2%;
 }
 .loadform {
-  width: 50%;
+  width: 20%;
+  margin-right:10%;
+  margin-left: 20%;
   display: inline-block;
 }
+@media(max-width:300px)
+{
+  .loadform {
+    width: 20%;
+    margin-left: 0%;
+    display: inline-block;
+  }
+
+}
 .newpatform {
-  width: 50%;
+  width: 20%; 
+  margin-left:10%;
   display: inline-block;
 }
 .insideload {
   border: 1px solid black;
+  text-align: center;
 }
 .insidenewpat {
   border: 1px solid black;
+  text-align: center;
+}
+.loadbutton{
+  background-color: #3c4d5f;
 }

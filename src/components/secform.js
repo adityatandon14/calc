@@ -50,6 +50,13 @@ class secform extends React.Component {
     e.preventDefault();
     history.push({ pathname: `/CALCULATOR`, state: { patientId: id } });
   };
+  fetchExistingPatient= (e, id) => {
+    const {
+      props: { history },
+    } = this;
+    e.preventDefault();
+    history.push({ pathname: `/LOGINCAL`, state: { patientId: id } });
+  };
   render() {
     const { Ptid } = this.state;
 

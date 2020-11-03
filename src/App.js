@@ -5,9 +5,11 @@ import About from './components/About';
 import secForm from './components/secform';
 import aboutus from './components/aboutus';
 import Header from './components/Header';
+
 import {BrowserRouter,useHistory} from 'react-router-dom'
 import Certificates, { certification } from './components/certification';
 import Calculator from './components/Calculator';
+import LoginCalculator from './components/logincalculator';
 
 import {initialstate,reducer} from './userreducer'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -49,10 +51,13 @@ const Routing=()=>{
               <Certificates />
           </Route>
           <Route path='/HOME'>
-              <aboutus />
+              <about />
               </Route>
           <Route path='/TEAM'>
               <aboutus />
+          </Route>
+          <Route path='/LOGINCAL'>
+              <LoginCalculator />
           </Route>
           
       </Switch>
@@ -72,6 +77,7 @@ function App() {
           
           <Route exact path="/LOGIN" component={secForm}></Route>
           <Route exact path="/CALCULATOR" component={Calculator}></Route>
+          <Route exact path="/LOGINCAL" component={LoginCalculator}></Route>
           <Route exact path="/APPRAISAL" component={Certificates}></Route>
           <Route exact path="/TEAM" component={aboutus}></Route>
          
