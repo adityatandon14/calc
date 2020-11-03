@@ -70,7 +70,7 @@ class secform extends React.Component {
             className="text-center w-100 mt-4"
             color="red"
             style={{
-              fontFamily: '"Permanent Marker", cursive',
+              
               fontSize: "3.6rem",
               color: "white",
             }}
@@ -130,7 +130,7 @@ class secform extends React.Component {
             className="text-center w-100 mt-4"
             color="red"
             style={{
-              fontFamily: '"Permanent Marker", cursive',
+              
               fontSize: "3.6rem",
               color: "white",
             }}
