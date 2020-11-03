@@ -41,6 +41,9 @@ const Routing=()=>{
   return (
       <Switch>
       <Header/>
+      <Route path='/HOME'>
+              <about />
+              </Route>
           <Route exact path='/CALCULATOR'>
               <Calculator/>
           </Route>
@@ -50,9 +53,7 @@ const Routing=()=>{
           <Route path='/APPRAISAL'>
               <Certificates />
           </Route>
-          <Route path='/HOME'>
-              <about />
-              </Route>
+          
           <Route path='/TEAM'>
               <aboutus />
           </Route>
