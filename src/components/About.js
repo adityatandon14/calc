@@ -71,13 +71,13 @@ export class About extends Component {
               </div>*/}
               <div className="flex-center">
               <div style={{ display: "flex", flexDirection: "row" }}>
-            <div className="left">
+            <div className="left"style={{ marginLeft:"10px"}}>
               <h3 className="white">MISSION</h3>
-              <p className="white">A mission statement is a short statement of why an organization exists, what its overall goal is, identifying the goal of its operations: what kind of product or service it provides, its primary customers or market, and its geographical region of operation </p>
+              <p className="white">A mission statement is a short statement of why an organization exists, what its overall goal is, identifying the goal of its operations: what kind of product or service it provides.</p>
             </div>
             <div className="right">
               <h3 className="white">PLAN</h3>
-              <p className="white">A goal statement is the foundation that you use to plan your work. Good goal statement examples should be properly documented and detailed. It should also completely define the outcome that you seek to accomplish</p>
+              <p className="white">A goal statement is the foundation that you use to plan your work. Good goal statement examples should be properly documented and detailed. It should also completely define </p>
             </div>
           </div>
           </div>
