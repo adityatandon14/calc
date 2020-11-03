@@ -13,9 +13,7 @@
     margin-right:20%;
     text-align: center;
 }
-.mainabout h1{
-    margin-left: 16%;
-}
+
 .tex{
     margin-left: 20%;
     margin-right:20%;
@@ -30,4 +28,32 @@ img.clear {
   }
 #don{
     margin-bottom: 20px;
+}
+.jhatka{
+    margin-left:18%;
+}
+@media(max-width: 500px)
+{
+    .jhatka{
+        margin-left:0%;
+    }
+}
+.mention{
+    margin-left:-2%;
+}
+.developer{
+    margin-left:18%;
+
+}
+@media(max-width: 500px)
+{
+    .developer{
+        margin-left:0%;
+    }
+}
+.text{
+    color: white;
+}
+.fab{
+    color: white;
 }

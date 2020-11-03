@@ -10,7 +10,6 @@ import { Checkbox } from "semantic-ui-react";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
-
 //import LayoutTextFields from './LayoutTextFields';
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
@@ -80,8 +79,7 @@ const useStyles = makeStyles((theme) => ({
 /*api */
 const MOCK_SERVICE = "http://e5986a2d38a5.ngrok.io/api/trial/";
 /*api ka name and defining all parameter*/
-export class Calculator extends Component {
-  
+export class loginalculator extends Component {
   // const classes = useStyles();
   constructor() {
     super();
@@ -177,7 +175,22 @@ export class Calculator extends Component {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({spo,heartrate,drpdownValue,ddimer,cpk,crp,ldh,tropo,ferr,absolute,ctscan,abg,age,resrate}),
+        body: JSON.stringify({
+          spo,
+          heartrate,
+          drpdownValue,
+          ddimer,
+          cpk,
+          crp,
+          ldh,
+          tropo,
+          ferr,
+          absolute,
+          ctscan,
+          abg,
+          age,
+          resrate,
+        }),
       })
         .then((response) => console.log(response))
         .then((data) => {
@@ -192,8 +205,7 @@ export class Calculator extends Component {
   render() {
     const hidden = this.state.checked ? "" : "hidden";
     return (
-      
-      <div className="jupiter" >
+      <div className="jupiter">
         {/* &lt; */}
         <title>Risk Calculator</title>
         <div className="full">
@@ -201,7 +213,6 @@ export class Calculator extends Component {
             <h1>RISK CALCULATOR</h1>
           </div>
           <div className="Image-container container">
-            
             <div className="putto">
               <h4>
                 This web based risk calculator estimates the risk of cytokine
@@ -213,8 +224,65 @@ export class Calculator extends Component {
               </h4>
             </div>
           </div>
+          <div className="forms">
+            <form className="loadform">
+              <div className="insideload">
+                <h2 style={{ fontSize: "15px" }}>LOAD EXISTING PATIENT</h2>
+                <div className="top">
+                  <label style={{ fontSize: "10px" }}>PT ID</label>
+                  <input
+                    className="input"
+                    type="text"
+                    placeholder="ID"
+                    name="Ptid"
+                    // onChange={this.handleChange}
+                  />
+                </div>
+                <br />
+                <label style={{ fontSize: "10px" }}>PASSWORD</label>
+                <input
+                  className="input"
+                  type="text"
+                  name="username"
+                  // onChange={this.handleChange}
+                />
 
-          
+                <br />
+
+                <button
+                  className="loadbutton"
+                  type="submit"
+                  //   onClick={(e) => this.fetchExistingPatient(e, Ptid)}
+                >
+                  LOAD
+                </button>
+              </div>
+            </form>
+            <form className="newpatform">
+              <div className="insidenewpat">
+                <h2 style={{ fontSize: "15px" }}>NEW PATIENT</h2>
+                <div className="top">
+                  <label style={{ fontSize: "10px" }}>PT ID</label>
+                  <input
+                    className="input"
+                    type="text"
+                    placeholder="ID"
+                    name="Ptid"
+                    // onChange={this.handleChange}
+                  />
+                </div>
+                <br />
+                <button
+                  className="loadbutton"
+                  type="submit"
+                  //   onClick={(e) => this.fetchExistingPatient(e, Ptid)}
+                >
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+          </div>
+
           <form onSubmit={this.handleSubmit} className="form">
             <div className="para-container mars">
               <div className="epidem-container col-md-9 col-sm-12 width=50% ">
@@ -289,19 +357,19 @@ export class Calculator extends Component {
 
                 <div className={hidden}>
                   <div className="lab">
-                    <div >
+                    <div>
                       <h1 className="head">LABORATORY FINDINGS</h1>
                       <div className="box2">
-                      <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: "flex", flexDirection: "row" }}>
                           <label className="para_name">
                             DDIMER:
                             <span className="error" id="sage" color="red">
                               *
                             </span>
                           </label>
-                        
+
                           <input
-                          className="ind"
+                            className="ind"
                             placeholder="DDIMER"
                             color="red"
                             type="number"
@@ -317,29 +385,27 @@ export class Calculator extends Component {
                             <option value={1}>g/mL</option>
                             <option value={2}>ml/ml</option>
                           </select>
-
-                        
                         </div>
                         <br />
                         <br />
-                        
+
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name md-col-4">
-                          CPK:
-                          <span className="error" id="sage" color="red">
-                          *
-                          </span>
-                         </label>
-                      
+                          <label className="para_name md-col-4">
+                            CPK:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
+
                           <input
-                          className="ind1"
+                            className="ind1"
                             type="number"
                             id="cpk"
                             required
                             onChange={this.handleLabFindings}
                           />
                           <select
-                          className="md-col-2"
+                            className="md-col-2"
                             id="measure_cpk"
                             name="measure"
                             onChange={this.handleChange}
@@ -347,18 +413,18 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>G/L</option>
                           </select>
-                         </div>
+                        </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          CRP:
-                          <span className="error" id="sage" color="red">
-                            *
-                          </span>
-                        </label>
+                          <label className="para_name">
+                            CRP:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
-                          className="ind2"
+                            className="ind2"
                             type="number"
                             id="crp"
                             required
@@ -372,19 +438,18 @@ export class Calculator extends Component {
                             <option value={1}>mg/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          LDH:
-                          <span className="error" id="sage" color="red">
-                          *
-                        </span>
-                      </label>
+                          <label className="para_name">
+                            LDH:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
-                          className="ind3"
+                            className="ind3"
                             type="number"
                             id="ldh"
                             required
@@ -398,19 +463,18 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                         
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          Troponin:
-                          <span className="error" id="sage" color="red">
-                          *
-                        </span>
-                      </label>
+                          <label className="para_name">
+                            Troponin:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
-                          className="ind4"
+                            className="ind4"
                             type="number"
                             id="tropo"
                             onChange={this.handleLabFindings}
@@ -424,20 +488,18 @@ export class Calculator extends Component {
                             <option value={1}>ng/ml</option>
                             <option value={2}>g/mL</option>
                           </select>
-                         
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          Ferritin:
-
-                          <span className="error" id="sage" color="red">
-                          *
-                        </span>
-                      </label>
+                          <label className="para_name">
+                            Ferritin:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
-                          className="ind5"
+                            className="ind5"
                             type="number"
                             id="ferr"
                             onChange={this.handleLabFindings}
@@ -451,26 +513,25 @@ export class Calculator extends Component {
                             <option value={1}>g/L</option>
                             <option value={2}>mg/L</option>
                           </select>
-                         
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name md-col-4">
-                          Absolute LC:
-                          <span className="error" id="sage" color="red">
-                            *
-                          </span>
-                        </label>
+                          <label className="para_name md-col-4">
+                            Absolute LC:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
-                          className="ind6"
-                          className="md-col-6"
+                            className="ind6"
+                            className="md-col-6"
                             type="number"
                             id="absolute"
                             onChange={this.handleLabFindings}
                           />
                           <select
-                          className="md-col-2"
+                            className="md-col-2"
                             id="measure_abg"
                             name="measure"
                             onChange={this.handleChange}
@@ -479,13 +540,10 @@ export class Calculator extends Component {
                             <option value={2}>g/L</option>
                           </select>
                           <br />
-                          
                         </div>
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          CT SCAN:
-                          </label>
+                          <label className="para_name">CT SCAN:</label>
                           <input className="ind7" type="ctscan" id="ctscan" />
                           <select
                             id="measure_ctscan"
@@ -495,17 +553,14 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                        
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          ABG    :(P / F)
-                          </label>
-                          
+                          <label className="para_name">ABG :(P / F)</label>
+
                           <input
-                          className="ind"
+                            className="ind"
                             type="number"
                             id="abg"
                             onChange={this.handleLabFindings}
@@ -519,10 +574,7 @@ export class Calculator extends Component {
                             <option value={2}>g/L</option>
                           </select>
                           <br />
-                          
-                        
                         </div>
-                        
                       </div>
                     </div>
                   </div>
@@ -531,7 +583,12 @@ export class Calculator extends Component {
             </div>
 
             <div className="btype">
-              <button  className="cbbt"type="submit" id="sub" onClick={this.handleSubmit}>
+              <button
+                className="cbbt"
+                type="submit"
+                id="sub"
+                onClick={this.handleSubmit}
+              >
                 CALCULATE
               </button>
             </div>
@@ -547,8 +604,7 @@ export class Calculator extends Component {
               feedback
             </marquee>
           </a>
-          
-         
+
           <div className="information">
             <p>
               Moderate and high risk patients require aggressive monitoring of
@@ -647,13 +703,14 @@ export class Calculator extends Component {
           </div>
         </div>
         <div className="footer-copyright text-center py-3">
-        <fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.google.in"> RISK CALCULATOR</a>
-        </fluid>
-      </div>
+          <fluid>
+            &copy; {new Date().getFullYear()} Copyright:{" "}
+            <a href="https://www.google.in"> RISK CALCULATOR</a>
+          </fluid>
+        </div>
       </div>
     );
   }
 }
 
-export default Calculator;
+export default logincalculator;

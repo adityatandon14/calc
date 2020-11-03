@@ -72,6 +72,7 @@ pre {
 .information {
   box-shadow: 0 0 15px;
   background-color: white;
+  color:white;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-top: 15px;
@@ -210,6 +211,7 @@ pre {
 }
 .btype {
   text-align: center;
+  
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.9) {
   * {
@@ -528,3 +530,48 @@ pre {
   width: 40%;
   height: 58px;
 } */
+.information {
+  background-color: black;
+  color: white;
+}
+.cbbt{
+  width:50%;
+}
+.ind{
+  margin-left:4%;
+}
+.ind1{
+  margin-left:6%;
+}
+.ind2{
+  margin-left:8%;
+}
+.ind3{
+  margin-left:5%;
+}
+.ind4{
+  margin-left:2%;
+}
+.ind5{
+  margin-left:5%;
+}
+.ind6{
+  margin-left:5%;
+}
+.ind7{
+  margin-left:3%;
+}
+.loadform {
+  width: 50%;
+  display: inline-block;
+}
+.newpatform {
+  width: 50%;
+  display: inline-block;
+}
+.insideload {
+  border: 1px solid black;
+}
+.insidenewpat {
+  border: 1px solid black;
+}
