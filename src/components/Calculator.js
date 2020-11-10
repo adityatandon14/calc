@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 /*api */
-const MOCK_SERVICE = "http://e5986a2d38a5.ngrok.io/api/trial/";
+const MOCK_SERVICE = "http://242539896ea9.ngrok.io/api/trial/";
 /*api ka name and defining all parameter*/
 export class Calculator extends Component {
   // const classes = useStyles();
@@ -330,6 +330,7 @@ export class Calculator extends Component {
                             <option value={1}>g/mL</option>
                             <option value={2}>ml/ml</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                         </div>
                         <br />
                         <br />
@@ -358,6 +359,7 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>G/L</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                         </div>
                         <br />
                         <br />
@@ -383,6 +385,7 @@ export class Calculator extends Component {
                             <option value={1}>mg/L</option>
                             <option value={2}>g/L</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                         </div>
                         <br />
                         <br />
@@ -408,6 +411,7 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                         </div>
                         <br />
                         <br />
@@ -433,6 +437,7 @@ export class Calculator extends Component {
                             <option value={1}>ng/ml</option>
                             <option value={2}>g/mL</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                         </div>
                         <br />
                         <br />
@@ -458,6 +463,7 @@ export class Calculator extends Component {
                             <option value={1}>g/L</option>
                             <option value={2}>mg/L</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                         </div>
                         <br />
                         <br />
@@ -484,6 +490,7 @@ export class Calculator extends Component {
                             <option value={1}>10^-6/L</option>
                             <option value={2}>g/L</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                           <br />
                         </div>
                         <br />
@@ -504,7 +511,9 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                           </div>
+
                         <br />
                         <br />
                         
@@ -519,6 +528,7 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
                         </div>
                           <br />
                         </div>
@@ -532,7 +542,7 @@ export class Calculator extends Component {
             <div className="btype">
               <button
                 className="cbbt"
-                type="submit"
+                type="button"
                 id="sub"
                 onClick={this.handleSubmit}
               >
