@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 /*api */
-const MOCK_SERVICE = "http://e5986a2d38a5.ngrok.io/api/trial/";
+const MOCK_SERVICE = "http://akshatrest.herokuapp.com/api/trial/";
 /*api ka name and defining all parameter*/
 export class logincalculator extends Component {
   // const classes = useStyles();
