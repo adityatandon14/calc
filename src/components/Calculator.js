@@ -1,4 +1,6 @@
 import React, { Fragment, Component } from "react";
+import { Modal } from '@material-ui/core';
+
 import "../css/alignmentbutton.css";
 import "../css/calc.css";
 import "../css/rpage.css";
@@ -9,6 +11,7 @@ import { Dropdown } from "semantic-ui-react";
 import { Checkbox } from "semantic-ui-react";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { data } from "jquery";
 
 //import LayoutTextFields from './LayoutTextFields';
 const styleLink = document.createElement("link");
@@ -77,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 /*api */
-const MOCK_SERVICE = "http://242539896ea9.ngrok.io/api/trial/";
+const MOCK_SERVICE = "http://akshatrest.herokuapp.com/api/trial/";
 /*api ka name and defining all parameter*/
 export class Calculator extends Component {
   // const classes = useStyles();
@@ -110,6 +113,8 @@ export class Calculator extends Component {
       measure_ctscan: 1,
       measure_abg: 1,
       measure_checkAbg: 1,
+      responseData: {},
+      modalOpen:false,
     };
     this.changeBind = this.changeBind.bind(this);
   }
@@ -192,18 +197,22 @@ export class Calculator extends Component {
           resrate,
         }),
       })
-        .then((response) => console.log(response))
+        .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          this.setState({ responseData: data, modalOpen: true });
         });
-    } catch (e) {
-      console.error("error");
-      console.log(e);
+    } catch (error) {
+      console.log(error);
     }
   };
 
   render() {
     const hidden = this.state.checked ? "" : "hidden";
+
+    const {
+      responseData: { message },
+      modalOpen
+    } = this.state;
     return (
       <div className="jupiter">
         {/* &lt; */}
@@ -330,7 +339,14 @@ export class Calculator extends Component {
                             <option value={1}>g/mL</option>
                             <option value={2}>ml/ml</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
                         </div>
                         <br />
                         <br />
@@ -359,7 +375,14 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>G/L</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
                         </div>
                         <br />
                         <br />
@@ -385,7 +408,14 @@ export class Calculator extends Component {
                             <option value={1}>mg/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
                         </div>
                         <br />
                         <br />
@@ -411,7 +441,14 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
                         </div>
                         <br />
                         <br />
@@ -437,7 +474,14 @@ export class Calculator extends Component {
                             <option value={1}>ng/ml</option>
                             <option value={2}>g/mL</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
                         </div>
                         <br />
                         <br />
@@ -463,7 +507,14 @@ export class Calculator extends Component {
                             <option value={1}>g/L</option>
                             <option value={2}>mg/L</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
                         </div>
                         <br />
                         <br />
@@ -490,12 +541,24 @@ export class Calculator extends Component {
                             <option value={1}>10^-6/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
                           <br />
                         </div>
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                          <label className="para_name" style={{ marginRight:"15px"}}>ABG :(P / F)</label>
+                          <label
+                            className="para_name"
+                            style={{ marginRight: "15px" }}
+                          >
+                            ABG :(P / F)
+                          </label>
 
                           <input
                             className="ind8"
@@ -511,13 +574,26 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
-                          </div>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
+                        </div>
 
                         <br />
                         <br />
-                        
-                          <div style={{ display: "flex", flexDirection: "row", marginTop:"-1%"}}>
+
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            marginTop: "-1%",
+                          }}
+                        >
                           <label className="para_name">CT SCAN:</label>
                           <input className="ind7" type="ctscan" id="ctscan" />
                           <select
@@ -528,16 +604,22 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">N/A</button>
+                          <button
+                            type="button"
+                            class="not_app_dd"
+                            id="btn_dd"
+                            onclick="NA_DD()"
+                          >
+                            N/A
+                          </button>
                         </div>
-                          <br />
-                        </div>
+                        <br />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            
+            </div>
 
             <div className="btype">
               <button
@@ -574,90 +656,14 @@ export class Calculator extends Component {
               {"            "}
             </div>
           </div>
-          <div id="myModal" className="modal">
-            {/* Modal content */}
-            <div className="modal-content">
-              <div className="modal-header">
-                <span className="close">Ã—</span>
-                <div className="respa">
-                  <span id="risk_fact" className="display_high" />
-                </div>
-              </div>
-              <div className="modal-body">
-                <div className="respa">
-                  Epidemiology:
-                  <span id="span1" />
-                </div>
-                <div className="respa">
-                  Vital Signs:
-                  <span id="span2" />
-                </div>
-                <div className="respa">
-                  Lab-Findings:
-                  <span id="span3" />
-                </div>
-              </div>
-              <div className="modal-footer">
-                <h2>PATIENT IS AT HIGH RISK</h2>
-              </div>
-            </div>
-          </div>
-          <div id="myModal1" className="modal1">
-            {/* Modal content */}
-            <div className="modal-content1">
-              <div className="modal-header1">
-                <span className="close1">Ã—</span>
-                <div className="respa">
-                  <span id="rissk_fact" className="display_low" />
-                </div>
-              </div>
-              <div className="modal-body1">
-                <div className="respa">
-                  Epidemiology:
-                  <span id="sspan1" />
-                </div>
-                <div className="respa">
-                  Vital Signs:
-                  <span id="sspan2" />
-                </div>
-                <div className="respa">
-                  Lab-Findings:
-                  <span id="sspan3" />
-                </div>
-              </div>
-              <div className="modal-footer1">
-                <h2>PATIENT IS AT LOW RISK</h2>
-              </div>
-            </div>
-          </div>
-          <div id="myModal2" className="modal2">
-            {/* Modal content */}
-            <div className="modal-content2">
-              <div className="modal-header2">
-                <span className="close2">Ã—</span>
-                <div className="respa">
-                  <span id="rismsk_fact" className="display_moderate" />
-                </div>
-              </div>
-              <div className="modal-body2">
-                <div className="respa">
-                  Epidemiology:
-                  <span id="smspan1" />
-                </div>
-                <div className="respa">
-                  Vital Signs:
-                  <span id="smspan2" />
-                </div>
-                <div className="respa">
-                  Lab-Findings:
-                  <span id="smspan3" />
-                </div>
-              </div>
-              <div className="modal-footer2">
-                <h2>PATIENT AT MODERATE RISK</h2>
-              </div>
-            </div>
-          </div>
+
+          <Modal
+            open={modalOpen}
+            onClose={() => {}}
+            aria-labelledby="simple-modal-title"
+          >
+            <p>{message}</p>
+          </Modal>
         </div>
         <div className="footer-copyright text-center py-3">
           <fluid>
