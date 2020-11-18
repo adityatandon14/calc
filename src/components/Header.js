@@ -86,14 +86,14 @@ const Header=()=> {
     return (
         <React.Fragment>
             <Navbar dark expand="md" >
-                <div className="container navbar"> 
+                <div className="container navbar" style={{color:"grey"}}> 
                     <NavbarToggler onClick={toggleNav} />             
                     <NavbarBrand className="mr-auto" href="/"><div className="home-title">RISK CALCULATOR</div></NavbarBrand> 
                     <Collapse isOpen={panel} navbar>                            
-                    <Nav navbar>
+                    <Nav navbar style={{color:"grey"}}>
                         <NavItem className='rout' key="1" onClick={toggleFalse}>
                             <Link className="nav-link" to="/HOME">
-                                <span className="fa fa-home fa-lg"> Home</span> 
+                                <span className="fa fa-home fa"> HOME</span> 
                             </Link>
                         </NavItem>  
                         {/*
@@ -105,18 +105,18 @@ const Header=()=> {
                         */}   
                         <NavItem className='rout' key="4" onClick={toggleFalse}>
                             <Link className="nav-link" to="/LOGIN">
-                                <span className="fa fa-calculator"> CALCULATOR </span> 
+                                <span className="fa fa-calculator" style={{color:"grey"}}> CALCULATOR </span> 
                             </Link>
                         </NavItem>           
                         <NavItem className='rout' key="3" onClick={toggleFalse}>
                             <Link className="nav-link" to="/TEAM" color="grey">
-                                <span className="fa fa-users"> TEAM</span> 
+                                <span className="fa fa-users" style={{color:"grey"}}> TEAM</span> 
                             </Link>
                         </NavItem>
                         
                         <NavItem className='rout' key="2" onClick={toggleFalse}>
                             <Link className="nav-link" to="/APPRAISAL">
-                                <span className="fa fa-gift"> APPRICIATION</span>
+                                <span className="fa fa-gift" style={{color:"grey"}}> APPRICIATION</span>
                             </Link>
                         </NavItem>
                     </Nav> 

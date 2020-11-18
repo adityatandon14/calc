@@ -599,3 +599,29 @@ pre {
 .loadbutton{
   background-color: #3c4d5f;
 }
+.pz{
+  margin:50%;
+  size:15px;
+  color:red;
+  size:70px;
+  background-color: red;
+  font-size: 70px;
+  
+}
+.modahai{
+  margin:30%;
+  color:red;
+  size:70px;
+  font-size: 50px;
+  text-align: center;
+}
+#modahai{
+ 
+    margin:30%;
+    color:red;
+    size:70px;
+    font-size: 50px;
+    text-align: center;
+    text-align: center;
+
+}

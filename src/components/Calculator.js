@@ -204,6 +204,9 @@ export class Calculator extends Component {
     } catch (error) {
       console.log(error);
     }
+
+
+    
   };
 
   render() {
@@ -378,7 +381,7 @@ export class Calculator extends Component {
                           <button
                             type="button"
                             class="not_app_dd"
-                            id="btn_dd"
+                            id="btn_cpk"
                             onclick="NA_DD()"
                           >
                             N/A
@@ -411,7 +414,7 @@ export class Calculator extends Component {
                           <button
                             type="button"
                             class="not_app_dd"
-                            id="btn_dd"
+                            id="btn_crp"
                             onclick="NA_DD()"
                           >
                             N/A
@@ -444,7 +447,7 @@ export class Calculator extends Component {
                           <button
                             type="button"
                             class="not_app_dd"
-                            id="btn_dd"
+                            id="btn_ldh"
                             onclick="NA_DD()"
                           >
                             N/A
@@ -477,7 +480,7 @@ export class Calculator extends Component {
                           <button
                             type="button"
                             class="not_app_dd"
-                            id="btn_dd"
+                            id="btn_tropo"
                             onclick="NA_DD()"
                           >
                             N/A
@@ -510,7 +513,7 @@ export class Calculator extends Component {
                           <button
                             type="button"
                             class="not_app_dd"
-                            id="btn_dd"
+                            id="btn_ferr"
                             onclick="NA_DD()"
                           >
                             N/A
@@ -544,7 +547,7 @@ export class Calculator extends Component {
                           <button
                             type="button"
                             class="not_app_dd"
-                            id="btn_dd"
+                            id="btn_abs"
                             onclick="NA_DD()"
                           >
                             N/A
@@ -577,7 +580,7 @@ export class Calculator extends Component {
                           <button
                             type="button"
                             class="not_app_dd"
-                            id="btn_dd"
+                            id="btn_abg"
                             onclick="NA_DD()"
                           >
                             N/A
@@ -594,7 +597,7 @@ export class Calculator extends Component {
                             marginTop: "-1%",
                           }}
                         >
-                          <label className="para_name">CT SCAN:</label>
+                          <label className="para_name">CT SCAN:(corad score)</label>
                           <input className="ind7" type="ctscan" id="ctscan" />
                           <select
                             id="measure_ctscan"
@@ -607,7 +610,7 @@ export class Calculator extends Component {
                           <button
                             type="button"
                             class="not_app_dd"
-                            id="btn_dd"
+                            id="btn_ctscan"
                             onclick="NA_DD()"
                           >
                             N/A
@@ -656,14 +659,17 @@ export class Calculator extends Component {
               {"            "}
             </div>
           </div>
-
+        <div className="modahai" id="modahai">
           <Modal
+          className="modahai"
             open={modalOpen}
             onClose={() => {}}
             aria-labelledby="simple-modal-title"
           >
-            <p>{message}</p>
+            <pz>{message}</pz>
           </Modal>
+          
+        </div>
         </div>
         <div className="footer-copyright text-center py-3">
           <fluid>
