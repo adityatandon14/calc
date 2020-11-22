@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Checkbox, Form } from "semantic-ui-react";
 import "../css/login.css";
-
+import Example from './Example';
 import { Redirect } from "react-router-dom";
 /* isme i need to make 2 apis 
 
@@ -20,6 +20,11 @@ class secform extends React.Component {
 
     this.state = {
       Ptid: null,
+      isAuthenticated: false,
+      selectedHospital: '',
+      username: '',
+      password: '',
+      errors: null
     };
   }
 
@@ -57,6 +62,18 @@ class secform extends React.Component {
     e.preventDefault();
     history.push({ pathname: `/LOGINCAL`, state: { patientId: id } });
   };
+  
+  handleChangenew = (e, data) => {
+    if (data) {
+      this.setState({
+        selectedHospital: data.value
+      });
+    } else {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+  };
   render() {
     const { Ptid } = this.state;
 
@@ -86,14 +103,8 @@ class secform extends React.Component {
                 <br/>
                 
                 <div className="top">
-                  <label style={{fontSize:"20px"}}>HOSPITAL ID</label>
-                  <input
-                    className="input"
-                    type="text"
-                    placeholder="ID"
-                    name="Ptid"
-                    onChange={this.handleChange}
-                  />
+                  <label style={{fontSize:"20px"}}>HOSPITAL NAME</label>
+                  <Example handleChange={this.handleChangenew} />
                 </div>
                <br/>
                <br/>
@@ -133,10 +144,11 @@ class secform extends React.Component {
               
               fontSize: "3.6rem",
               color: "white",
+              flexDirection:"row",
             }}
             color="white"
           >
-            SKIP LOGIN
+           <h1 style={{wordWrap: 'break-word', color:"white",flex: 1, flexWrap: 'wrap'}}> SKIP LOGIN </h1> 
           </h1>
             </button>
           </div>

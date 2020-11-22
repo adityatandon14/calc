@@ -597,7 +597,7 @@ export class Calculator extends Component {
                             marginTop: "-1%",
                           }}
                         >
-                          <label className="para_name">CT SCAN:(corad score)</label>
+                          <label className="para_name">CT SCAN:(corad)</label>
                           <input className="ind7" type="ctscan" id="ctscan" />
                           <select
                             id="measure_ctscan"

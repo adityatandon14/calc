@@ -549,7 +549,7 @@ export class logincalculator extends Component {
                         </div>
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                          <label className="para_name">CT SCAN:</label>
+                          <label className="para_name">CT SCAN(corad):</label>
                           <input className="ind7" type="ctscan" id="ctscan" />
                           <select
                             id="measure_ctscan"
@@ -612,7 +612,7 @@ export class logincalculator extends Component {
           </a>
 
           <div className="information container">
-            <p>
+          <div className="ptor">
               Moderate and high risk patients require aggressive monitoring of
               inflammatory milieu or up triaging. Anti-inflammatory therapy with
               steroid and Anticoagulation recommended.{"\n"}*Please note these
@@ -621,7 +621,7 @@ export class logincalculator extends Component {
               guidelines.{"\n"}
               {"\n"}* compulsary{"\n"}
               {"            "}
-            </p>
+            </div>
           </div>
           <div id="myModal" className="modal">
             {/* Modal content */}

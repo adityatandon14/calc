@@ -2,7 +2,7 @@
   "name": "calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": " http://adityatandon14.github.io/CALCULATOR/",
+  "homepage": " http://adityatandon14.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/styles": "^4.10.0",

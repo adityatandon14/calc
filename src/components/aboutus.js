@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import "../css/styles.css";
 import "../css/fontawe.css";
 import "../css/Aboutus.css";
+import one from "../pics/one.jpeg";
+import two from "../pics/two.jpeg";
+import three from "../pics/three.jpeg";
+import four from "../pics/four.jpeg";
+import five from "../pics/five.jpeg";
+import six from "../pics/six.jpeg";
+import { Media } from "react-bootstrap";
 
 export class aboutus extends Component {
   render() {
@@ -70,7 +77,7 @@ export class aboutus extends Component {
             <div className="row">
               <div className="col-lg-4">
                 <img
-                  src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
+                  src={one}
                   class="col-lg-12"
                   margin="10px"
                 />
@@ -80,7 +87,7 @@ export class aboutus extends Component {
               </div>
               <div className="col-lg-4">
                 <img
-                  src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
+                  src={two}
                   class="col-lg-12"
                   margin="10px"
                 />
@@ -89,7 +96,7 @@ export class aboutus extends Component {
               </div>
               <div className="col-lg-4">
                 <img
-                  src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
+                  src={three}
                   class="col-lg-12"
                   margin="10px"
                 />
@@ -100,7 +107,7 @@ export class aboutus extends Component {
             <div className="row ">
               <div className="col-lg-4 jhatka" >
                 <img
-                  src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
+                  src={four}
                   class="col-lg-12"
                   margin="10px"
                 />
@@ -110,7 +117,7 @@ export class aboutus extends Component {
               </div>
               <div className="col-lg-4 jhatka2">
                 <img
-                  src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
+                  src={five}
                   class="col-lg-12"
                   margin="10px"
                 />
@@ -121,7 +128,7 @@ export class aboutus extends Component {
 
             <br />
             <br />
-            
+          {/*   
           <h5 className="headline__sub-head" style={{
             textAlign:"center",
             fontFamily: '"Permanent Marker", cursive',
@@ -159,6 +166,7 @@ export class aboutus extends Component {
             </div>
           <br />
           <br />
+        */}
           <h5 className="headline__sub-head" style={{
             textAlign:"center",
             fontFamily: '"Permanent Marker", cursive',
@@ -169,7 +177,7 @@ export class aboutus extends Component {
           <div className="row">
               <div className="col-lg-4">
                 <img
-                  src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
+                  src="https://media-exp1.licdn.com/dms/image/C5103AQFn3XBVi1JMOA/profile-displayphoto-shrink_200_200/0/1579021710378?e=1611187200&v=beta&t=aVQsgBsYtdABvKMhHgKHxer406UEirrWIL66FLyogPE"
                   class="col-lg-12"
                   margin="10px"
                 />
@@ -178,9 +186,10 @@ export class aboutus extends Component {
               </div>
               <div className="col-lg-4">
                 <img
-                  src="https://i.pinimg.com/236x/6f/b4/4d/6fb44dd91a8378f95e066d96d26c7bb7.jpg"
+                  src={six}
                   class="col-lg-12"
-                  margin="10px"
+                  margin="15px"
+                  style={{height:"195px"}}
                 />
                 <div className="text">AMITABH10</div>
                 <i className="fab fa-linkedin-square fa-2x" aria-hidden="true"></i>

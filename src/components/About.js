@@ -49,6 +49,7 @@ export class About extends Component {
             
           </div>
           <h1 className="Heading">RISK CALCULATOR</h1>
+          
           <section>
             <div className="container-fluid p-0" id="who">
               

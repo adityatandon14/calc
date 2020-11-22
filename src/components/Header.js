@@ -88,7 +88,7 @@ const Header=()=> {
             <Navbar dark expand="md" >
                 <div className="container navbar" style={{color:"grey"}}> 
                     <NavbarToggler onClick={toggleNav} />             
-                    <NavbarBrand className="mr-auto" href="/"><div className="home-title">RISK CALCULATOR</div></NavbarBrand> 
+                    <NavbarBrand className="mr-auto" href="/" style={{marginLeft:"-150px", marginRight:"100px"}}><div className="home-title" >RISK CALCULATOR</div></NavbarBrand> 
                     <Collapse isOpen={panel} navbar>                            
                     <Nav navbar style={{color:"grey"}}>
                         <NavItem className='rout' key="1" onClick={toggleFalse}>

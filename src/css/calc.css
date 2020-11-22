@@ -559,7 +559,7 @@ pre {
   margin-left:6%;
 }
 .ind7{
-  margin-left:10%;
+  margin-left:0%;
   height: 28px ; 
 }
 #measure_ctscan{
@@ -590,14 +590,19 @@ pre {
 }
 .insideload {
   border: 1px solid black;
+  border-radius: 25px;
+  margin:5px;
   text-align: center;
 }
 .insidenewpat {
   border: 1px solid black;
   text-align: center;
+  border-radius: 25px;
 }
 .loadbutton{
   background-color: #3c4d5f;
+  border-radius: 25px;
+  margin:5px;
 }
 .pz{
   margin:50%;
