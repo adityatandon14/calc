@@ -6,6 +6,7 @@ import '../css/calc.css';
 import '../css/rpage.css';
 import '../css/rpage1.css';
 import '../css/rpage2.css';
+import '../css/style.css';
 
 import { Dropdown } from 'semantic-ui-react';
 import { Checkbox } from 'semantic-ui-react';
@@ -476,6 +477,8 @@ export class Calculator extends Component {
                 CALCULATE
               </button>
             </div>
+            <br></br>
+            <br></br>
           </form>
           <a href="https://forms.gle/3yrDBz4CeLhnW4kX8" target="_blank">
             <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">

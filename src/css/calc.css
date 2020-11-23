@@ -12,14 +12,17 @@ h3 {
 }
 
 .box1 input {
-  text-align: right;
+  text-align: center;
 }
 .box2 {
   
-  text-align: left;
+  text-align: right;
   display: flex; 
     flex-direction: column; 
     align-items: center;
+}
+.box2 input {
+  text-align: center;
 }
 .jupiter{
   align-items: center;
@@ -244,7 +247,7 @@ pre {
     left: 30%;
   }
   .container {
-    text-align: left;
+    text-align: right;
   }
   ::placeholder {
     color: dimgrey;
@@ -429,7 +432,7 @@ pre {
   }
   .lab {
     margin-left: 10px;
-    text-align: left;
+    text-align: right;
   }
   /* #dd {
     margin-left: 25px;
@@ -488,14 +491,14 @@ pre {
   margin: 5%;
 }
 .epidem {
-  text-align: left;
+  text-align: right;
 }
 .lab {
-  text-align: left;
+  text-align: right;
 }
 
 .vital {
-  text-align: left;
+  text-align: right;
 }
 
 .para-container > * {
