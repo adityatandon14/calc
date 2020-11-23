@@ -81,7 +81,7 @@ export class aboutus extends Component {
                   class="col-lg-12"
                   margin="10px"
                 />
-                <div className="text">AMITABH1</div>
+                <div className="text">Ms MONALISA BISWAS</div>
                 <i className="fab fa-linkedin-square fa-2x" aria-hidden="true"></i>
 
               </div>
@@ -91,7 +91,7 @@ export class aboutus extends Component {
                   class="col-lg-12"
                   margin="10px"
                 />
-                <div className="text">AMITABH2</div>
+                <div className="text">Mr BURHANUDDIN RANGWALA</div>
                 <i className="fab fa-linkedin-square fa-2x" aria-hidden="true"></i>
               </div>
               <div className="col-lg-4">
@@ -100,7 +100,7 @@ export class aboutus extends Component {
                   class="col-lg-12"
                   margin="10px"
                 />
-                <div className="text">AMITABH3</div>
+                <div className="text">Dr VISHAL SHANBAGH</div>
                 <i className="fab fa-linkedin-square fa-2x" aria-hidden="true"></i>
               </div>
             </div>
@@ -112,7 +112,7 @@ export class aboutus extends Component {
                   margin="10px"
                 />
 
-                <div className="text">AMITABH4</div>
+                <div className="text">Mr MANORATH KHANNA</div>
                 <i className="fab fa-linkedin-square fa-2x" aria-hidden="true"></i>
               </div>
               <div className="col-lg-4 jhatka2">
@@ -121,7 +121,7 @@ export class aboutus extends Component {
                   class="col-lg-12"
                   margin="10px"
                 />
-                <div className="text">AMITABH5</div>
+                <div className="text">Dr VIJETHA SHENOY</div>
                 <i className="fab fa-linkedin-square fa-2x" aria-hidden="true"></i>
               </div>
             </div>
@@ -181,7 +181,7 @@ export class aboutus extends Component {
                   class="col-lg-12"
                   margin="10px"
                 />
-                <div className="text">AMITABH9</div>
+                <div className="text">Mr ADITYA TANDON</div>
                 <i className="fab fa-linkedin-square fa-2x" aria-hidden="true"></i>
               </div>
               <div className="col-lg-4">
@@ -191,7 +191,7 @@ export class aboutus extends Component {
                   margin="15px"
                   style={{height:"195px"}}
                 />
-                <div className="text">AMITABH10</div>
+                <div className="text">Mr AKSHAT DOKANIA</div>
                 <i className="fab fa-linkedin-square fa-2x" aria-hidden="true"></i>
               </div>
               

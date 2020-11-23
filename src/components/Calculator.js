@@ -7,7 +7,7 @@ import '../css/rpage.css';
 import '../css/rpage1.css';
 import '../css/rpage2.css';
 import '../css/style.css';
-
+import './nabuttons';
 import { Dropdown } from 'semantic-ui-react';
 import { Checkbox } from 'semantic-ui-react';
 
@@ -157,7 +157,9 @@ export class Calculator extends Component {
 
   /*form submit button*/
 
+/*idhar call check param and if true returned post req otherwise popup*/
   handleSubmit = e => {
+    
     const {
       state: { age, spo, heartrate, resrate, drpdownValue, ddimer, cpk, crp, ldh, tropo, ferr, absolute, ctscan, abg }
     } = this;
@@ -198,7 +200,7 @@ export class Calculator extends Component {
 
   render() {
     const hidden = this.state.checked ? '' : 'hidden';
-
+    
     const {
       responseData: { message, epicount, vitalcount, labcount },
       modalOpen
