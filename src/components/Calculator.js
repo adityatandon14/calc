@@ -1,44 +1,43 @@
-import React, { Fragment, Component } from "react";
-import { Modal } from '@material-ui/core';
+import React, { Fragment, Component } from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import "../css/alignmentbutton.css";
-import "../css/calc.css";
-import "../css/rpage.css";
-import "../css/rpage1.css";
-import "../css/rpage2.css";
+import '../css/alignmentbutton.css';
+import '../css/calc.css';
+import '../css/rpage.css';
+import '../css/rpage1.css';
+import '../css/rpage2.css';
 
-import { Dropdown } from "semantic-ui-react";
-import { Checkbox } from "semantic-ui-react";
+import { Dropdown } from 'semantic-ui-react';
+import { Checkbox } from 'semantic-ui-react';
 
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { data } from "jquery";
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { data } from 'jquery';
 
 //import LayoutTextFields from './LayoutTextFields';
-const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href =
-  "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+const styleLink = document.createElement('link');
+styleLink.rel = 'stylesheet';
+styleLink.href = 'https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css';
 document.head.appendChild(styleLink);
 //these are the options for epidem dropdown
 const options = [
   {
-    key: "H/O PULMONARY DISEASE",
-    text: "H/O PULMONARY DISEASE",
-    value: "H/O PULMONARY DISEASE",
+    key: 'H/O PULMONARY DISEASE',
+    text: 'H/O PULMONARY DISEASE',
+    value: 'H/O PULMONARY DISEASE'
   },
-  { key: "H/O CKD", text: "H/O CKD", value: "H/O CKD" },
+  { key: 'H/O CKD', text: 'H/O CKD', value: 'H/O CKD' },
   {
-    key: "H/O DM/(HbA1c>7.6)",
-    text: "H/O DM/(HbA1c>7.6)",
-    value: "H/O DM/(HbA1c>7.6)",
+    key: 'H/O DM/(HbA1c>7.6)',
+    text: 'H/O DM/(HbA1c>7.6)',
+    value: 'H/O DM/(HbA1c>7.6)'
   },
-  { key: "H/O HCN", text: "H/O HCN", value: "H/O HCN" },
-  { key: "H/O HIV", text: "H/O HIV", value: "H/O HIV" },
+  { key: 'H/O HCN', text: 'H/O HCN', value: 'H/O HCN' },
+  { key: 'H/O HIV', text: 'H/O HIV', value: 'H/O HIV' },
   {
-    key: "IMMUNOSUPRESSION",
-    text: "IMMUNOSUPRESSION",
-    value: "IMMUNOSUPRESSION",
-  },
+    key: 'IMMUNOSUPRESSION',
+    text: 'IMMUNOSUPRESSION',
+    value: 'IMMUNOSUPRESSION'
+  }
 ];
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -46,41 +45,41 @@ const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
+      width: 250
+    }
+  }
 };
 //basic styling property using library functions
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    display: "block",
-    flexWrap: "wrap",
+    display: 'block',
+    flexWrap: 'wrap'
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
-    width: "25ch",
+    width: '25ch'
   },
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
-    maxWidth: 300,
+    maxWidth: 300
   },
   chips: {
-    display: "flex",
-    flexWrap: "wrap",
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   chip: {
-    margin: 2,
+    margin: 2
   },
   noLabel: {
-    marginTop: theme.spacing(3),
-  },
+    marginTop: theme.spacing(3)
+  }
 }));
 /*api */
-const MOCK_SERVICE = "http://akshatrest.herokuapp.com/api/trial/";
+const MOCK_SERVICE = 'http://akshatrest.herokuapp.com/api/trial/';
 /*api ka name and defining all parameter*/
 export class Calculator extends Component {
   // const classes = useStyles();
@@ -88,21 +87,21 @@ export class Calculator extends Component {
     super();
     this.state = {
       checked: false,
-      age: "50",
-      spo: "",
-      heartrate: "",
-      resrate: "",
-      drpdownValue: "",
-      ddimer: "",
-      cpk: "",
-      crp: "",
-      ldh: "",
-      tropo: "",
-      ferr: "",
-      absolute: "",
-      ctscan: "",
-      abg: "",
-      checkAbg: "",
+      age: '50',
+      spo: '',
+      heartrate: '',
+      resrate: '',
+      drpdownValue: '',
+      ddimer: '',
+      cpk: '',
+      crp: '',
+      ldh: '',
+      tropo: '',
+      ferr: '',
+      absolute: '',
+      ctscan: '',
+      abg: '',
+      checkAbg: '',
       measure_ddimer: 1,
       measure_cpk: 1,
       measure_crp: 1,
@@ -114,7 +113,7 @@ export class Calculator extends Component {
       measure_abg: 1,
       measure_checkAbg: 1,
       responseData: {},
-      modalOpen:false,
+      modalOpen: false
     };
     this.changeBind = this.changeBind.bind(this);
   }
@@ -126,10 +125,15 @@ export class Calculator extends Component {
 
   /*for all the values getting filled*/
 
-  handleChange = (e) => {
+  handleChange = e => {
     const { id, value } = e.target;
     this.setState({ [id]: value });
   };
+
+  toggleModal = () =>
+    this.setState(prevState => ({
+      modalOpen: !prevState.modalOpen
+    }));
 
   /*dropdown ki values set ke lie*/
 
@@ -139,11 +143,11 @@ export class Calculator extends Component {
 
   /*this function is for units change if its sec unit multiply by 1000 and send the values*/
 
-  handleLabFindings = (e) => {
+  handleLabFindings = e => {
     const { id, value } = e.target;
     const meaureToCheck = `measure_${id}`;
-    console.log(meaureToCheck, "meaureToCheck");
-    if (this.state[meaureToCheck] === "2") {
+    console.log(meaureToCheck, 'meaureToCheck');
+    if (this.state[meaureToCheck] === '2') {
       this.setState({ [id]: value * 1000 });
     } else {
       this.setState({ [id]: value });
@@ -152,33 +156,18 @@ export class Calculator extends Component {
 
   /*form submit button*/
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     const {
-      state: {
-        age,
-        spo,
-        heartrate,
-        resrate,
-        drpdownValue,
-        ddimer,
-        cpk,
-        crp,
-        ldh,
-        tropo,
-        ferr,
-        absolute,
-        ctscan,
-        abg,
-      },
+      state: { age, spo, heartrate, resrate, drpdownValue, ddimer, cpk, crp, ldh, tropo, ferr, absolute, ctscan, abg }
     } = this;
 
     /*this is how the data is being sent in json format*/
 
     try {
       fetch(`${MOCK_SERVICE}`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           spo,
@@ -194,26 +183,23 @@ export class Calculator extends Component {
           ctscan,
           abg,
           age,
-          resrate,
-        }),
+          resrate
+        })
       })
-        .then((response) => response.json())
-        .then((data) => {
+        .then(response => response.json())
+        .then(data => {
           this.setState({ responseData: data, modalOpen: true });
         });
     } catch (error) {
       console.log(error);
     }
-
-
-    
   };
 
   render() {
-    const hidden = this.state.checked ? "" : "hidden";
+    const hidden = this.state.checked ? '' : 'hidden';
 
     const {
-      responseData: { message },
+      responseData: { message, epicount, vitalcount, labcount },
       modalOpen
     } = this.state;
     return (
@@ -230,11 +216,9 @@ export class Calculator extends Component {
           <div className="Image-container container">
             <div className="putto">
               <h4>
-                This web based risk calculator estimates the risk of cytokine
-                storm activaton in Covid-19 patients, which is based on
-                epidemiological, vital signs and laboratory findings. Ref: 1.
-                Eva W. Cheung at al. Multisystem Inflammatory Syndrome Related
-                to COVID-19 in Previously Healthy Children and Adolescents in
+                This web based risk calculator estimates the risk of cytokine storm activaton in Covid-19 patients,
+                which is based on epidemiological, vital signs and laboratory findings. Ref: 1. Eva W. Cheung at al.
+                Multisystem Inflammatory Syndrome Related to COVID-19 in Previously Healthy Children and Adolescents in
                 New York City. JAMA. June 08, 2020. doi:10.1001/jama.2020.10374
               </h4>
             </div>
@@ -264,12 +248,7 @@ export class Calculator extends Component {
 
                   <label className="para_name">
                     RESPIRATORY RATE:
-                    <input
-                      type="number"
-                      id="resrate"
-                      required
-                      onChange={this.handleChange}
-                    />
+                    <input type="number" id="resrate" required onChange={this.handleChange} />
                   </label>
                   <span className="error" id="srr" color="red">
                     *
@@ -278,12 +257,7 @@ export class Calculator extends Component {
                   <br />
                   <label className="para_name">
                     HEART RATE:
-                    <input
-                      type="number"
-                      id="heartrate"
-                      required
-                      onChange={this.handleChange}
-                    />
+                    <input type="number" id="heartrate" required onChange={this.handleChange} />
                     <span className="error" id="shr" color="red">
                       *
                     </span>
@@ -292,12 +266,7 @@ export class Calculator extends Component {
                   <br />
                   <label className="para_name">
                     SPO2 :
-                    <input
-                      type="number"
-                      id="spo"
-                      required
-                      onChange={this.handleChange}
-                    />
+                    <input type="number" id="spo" required onChange={this.handleChange} />
                     <span className="error" id="sspoe" color="red">
                       *
                     </span>
@@ -307,7 +276,7 @@ export class Calculator extends Component {
                 </div>
                 <Checkbox
                   className="ruby"
-                  label={{ children: "LAB READINGS" }}
+                  label={{ children: 'LAB READINGS' }}
                   checked={this.state.checked}
                   onChange={this.changeBind}
                 />
@@ -317,7 +286,7 @@ export class Calculator extends Component {
                     <div>
                       <h1 className="head">LABORATORY FINDINGS</h1>
                       <div className="box2">
-                        <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
                           <label className="para_name">
                             DDIMER:
                             <span className="error" id="sage" color="red">
@@ -334,27 +303,18 @@ export class Calculator extends Component {
                             onChange={this.handleLabFindings}
                             required
                           />
-                          <select
-                            id="measure_ddimer"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <select id="measure_ddimer" name="measure" onChange={this.handleChange}>
                             <option value={1}>g/mL</option>
                             <option value={2}>ml/ml</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_dd"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_dd" onclick="NA_DD()">
                             N/A
                           </button>
                         </div>
                         <br />
                         <br />
 
-                        <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
                           <label className="para_name md-col-4">
                             CPK:
                             <span className="error" id="sage" color="red">
@@ -362,166 +322,90 @@ export class Calculator extends Component {
                             </span>
                           </label>
 
-                          <input
-                            className="ind1"
-                            type="number"
-                            id="cpk"
-                            required
-                            onChange={this.handleLabFindings}
-                          />
-                          <select
-                            className="md-col-2"
-                            id="measure_cpk"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <input className="ind1" type="number" id="cpk" required onChange={this.handleLabFindings} />
+                          <select className="md-col-2" id="measure_cpk" name="measure" onChange={this.handleChange}>
                             <option value={1}>U/L</option>
                             <option value={2}>G/L</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_cpk"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_cpk" onclick="NA_DD()">
                             N/A
                           </button>
                         </div>
                         <br />
                         <br />
-                        <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
                           <label className="para_name">
                             CRP:
                             <span className="error" id="sage" color="red">
                               *
                             </span>
                           </label>
-                          <input
-                            className="ind2"
-                            type="number"
-                            id="crp"
-                            required
-                            onChange={this.handleLabFindings}
-                          />
-                          <select
-                            id="measure_crp"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <input className="ind2" type="number" id="crp" required onChange={this.handleLabFindings} />
+                          <select id="measure_crp" name="measure" onChange={this.handleChange}>
                             <option value={1}>mg/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_crp"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_crp" onclick="NA_DD()">
                             N/A
                           </button>
                         </div>
                         <br />
                         <br />
-                        <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
                           <label className="para_name">
                             LDH:
                             <span className="error" id="sage" color="red">
                               *
                             </span>
                           </label>
-                          <input
-                            className="ind3"
-                            type="number"
-                            id="ldh"
-                            required
-                            onChange={this.handleLabFindings}
-                          />
-                          <select
-                            id="measure_ldh"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <input className="ind3" type="number" id="ldh" required onChange={this.handleLabFindings} />
+                          <select id="measure_ldh" name="measure" onChange={this.handleChange}>
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_ldh"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_ldh" onclick="NA_DD()">
                             N/A
                           </button>
                         </div>
                         <br />
                         <br />
-                        <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
                           <label className="para_name">
                             Troponin:
                             <span className="error" id="sage" color="red">
                               *
                             </span>
                           </label>
-                          <input
-                            className="ind4"
-                            type="number"
-                            id="tropo"
-                            onChange={this.handleLabFindings}
-                            required
-                          />
-                          <select
-                            id="measure_tropo"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <input className="ind4" type="number" id="tropo" onChange={this.handleLabFindings} required />
+                          <select id="measure_tropo" name="measure" onChange={this.handleChange}>
                             <option value={1}>ng/ml</option>
                             <option value={2}>g/mL</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_tropo"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_tropo" onclick="NA_DD()">
                             N/A
                           </button>
                         </div>
                         <br />
                         <br />
-                        <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
                           <label className="para_name">
                             Ferritin:
                             <span className="error" id="sage" color="red">
                               *
                             </span>
                           </label>
-                          <input
-                            className="ind5"
-                            type="number"
-                            id="ferr"
-                            onChange={this.handleLabFindings}
-                            required
-                          />
-                          <select
-                            id="measure_ferr"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <input className="ind5" type="number" id="ferr" onChange={this.handleLabFindings} required />
+                          <select id="measure_ferr" name="measure" onChange={this.handleChange}>
                             <option value={1}>g/L</option>
                             <option value={2}>mg/L</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_ferr"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_ferr" onclick="NA_DD()">
                             N/A
                           </button>
                         </div>
                         <br />
                         <br />
-                        <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
                           <label className="para_name md-col-4">
                             Absolute LC:
                             <span className="error" id="sage" color="red">
@@ -535,54 +419,27 @@ export class Calculator extends Component {
                             id="absolute"
                             onChange={this.handleLabFindings}
                           />
-                          <select
-                            className="md-col-2"
-                            id="measure_abg"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <select className="md-col-2" id="measure_abg" name="measure" onChange={this.handleChange}>
                             <option value={1}>10^-6/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_abs"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_abs" onclick="NA_DD()">
                             N/A
                           </button>
                           <br />
                         </div>
                         <br />
-                        <div style={{ display: "flex", flexDirection: "row" }}>
-                          <label
-                            className="para_name"
-                            style={{ marginRight: "15px" }}
-                          >
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
+                          <label className="para_name" style={{ marginRight: '15px' }}>
                             ABG :(P / F)
                           </label>
 
-                          <input
-                            className="ind8"
-                            type="number"
-                            id="abg"
-                            onChange={this.handleLabFindings}
-                          />
-                          <select
-                            id="measure_checkAbg"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <input className="ind8" type="number" id="abg" onChange={this.handleLabFindings} />
+                          <select id="measure_checkAbg" name="measure" onChange={this.handleChange}>
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_abg"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_abg" onclick="NA_DD()">
                             N/A
                           </button>
                         </div>
@@ -592,27 +449,17 @@ export class Calculator extends Component {
 
                         <div
                           style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            marginTop: "-1%",
-                          }}
-                        >
+                            display: 'flex',
+                            flexDirection: 'row',
+                            marginTop: '-1%'
+                          }}>
                           <label className="para_name">CT SCAN:(corad)</label>
                           <input className="ind7" type="ctscan" id="ctscan" />
-                          <select
-                            id="measure_ctscan"
-                            name="measure"
-                            onChange={this.handleChange}
-                          >
+                          <select id="measure_ctscan" name="measure" onChange={this.handleChange}>
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          <button
-                            type="button"
-                            class="not_app_dd"
-                            id="btn_ctscan"
-                            onclick="NA_DD()"
-                          >
+                          <button type="button" class="not_app_dd" id="btn_ctscan" onclick="NA_DD()">
                             N/A
                           </button>
                         </div>
@@ -625,61 +472,51 @@ export class Calculator extends Component {
             </div>
 
             <div className="btype">
-              <button
-                className="cbbt"
-                type="button"
-                id="sub"
-                onClick={this.handleSubmit}
-              >
+              <button className="cbbt" type="button" id="sub" onClick={this.handleSubmit}>
                 CALCULATE
               </button>
             </div>
           </form>
           <a href="https://forms.gle/3yrDBz4CeLhnW4kX8" target="_blank">
-            <marquee
-              behavior="scroll"
-              direction="left"
-              onmouseover="this.stop();"
-              onmouseout="this.start();"
-            >
-              Please help us to contribute more by providing your valuable
-              feedback
+            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+              Please help us to contribute more by providing your valuable feedback
             </marquee>
           </a>
 
           <div className="information container">
             <div className="ptor">
-              Moderate and high risk patients require aggressive monitoring of
-              inflammatory milieu or up triaging. Anti-inflammatory therapy with
-              steroid and Anticoagulation recommended.{"\n"}*Please note these
-              are mere recommendation from the author based on the available
-              scientific recommendation and no means intended to replace local
-              guidelines.{"\n"}
-              {"\n"}* compulsary{"\n"}
-              {"            "}
+              Moderate and high risk patients require aggressive monitoring of inflammatory milieu or up triaging.
+              Anti-inflammatory therapy with steroid and Anticoagulation recommended.{'\n'}*Please note these are mere
+              recommendation from the author based on the available scientific recommendation and no means intended to
+              replace local guidelines.{'\n'}
+              {'\n'}* compulsary{'\n'}
+              {'            '}
             </div>
           </div>
-        <div className="modahai" id="modahai">
-          <Modal
-          className="modahai"
-            open={modalOpen}
-            onClose={() => {}}
-            aria-labelledby="simple-modal-title"
-          >
-            <pz>{message}</pz>
-          </Modal>
-          
-        </div>
+          <div className="modahai" id="modahai">
+            <Modal isOpen={this.state.modalOpen} toggle={this.toggleModal}>
+              <ModalHeader toggle={this.toggleModal}>Risk Factor is 7.5 on a scale of 1-10</ModalHeader>
+              <ModalBody>
+                <div>Epimemiopology: {epicount} Parameters out of Normal Range</div>
+                <div>Vital Signs: {vitalcount} Parameters out of Normal Range</div>
+                <div>
+                  Lab-Findings: {labcount}
+                  Parameters out of Normal Range
+                </div>
+              </ModalBody>
+              <ModalFooter>Patient is at {message}</ModalFooter>
+            </Modal>
+          </div>
         </div>
         <div className="footer-copyright text-center py-3">
           <fluid>
-            &copy; {new Date().getFullYear()} Copyright:{" "}
-            <a href="https://www.google.in"> RISK CALCULATOR</a>
+            &copy; {new Date().getFullYear()} Copyright: <a href="https://www.google.in"> RISK CALCULATOR</a>
           </fluid>
         </div>
       </div>
     );
   }
 }
+
 
 export default Calculator;
