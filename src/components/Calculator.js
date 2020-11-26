@@ -159,7 +159,7 @@ export class Calculator extends Component {
 
 /*idhar call check param and if true returned post req otherwise popup*/
   handleSubmit = e => {
-    
+    /* IDHAR CALL KARNA HAI CHECK PARAM AND CHECK IF TRUE POST IT*/
     const {
       state: { age, spo, heartrate, resrate, drpdownValue, ddimer, cpk, crp, ldh, tropo, ferr, absolute, ctscan, abg }
     } = this;
