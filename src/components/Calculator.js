@@ -7,7 +7,7 @@ import '../css/rpage.css';
 import '../css/rpage1.css';
 import '../css/rpage2.css';
 import '../css/style.css';
-import './nabuttons';
+import {checkParam} from './nabuttons';
 import { Dropdown } from 'semantic-ui-react';
 import { Checkbox } from 'semantic-ui-react';
 
@@ -156,17 +156,22 @@ export class Calculator extends Component {
   };
 
   /*form submit button*/
-
 /*idhar call check param and if true returned post req otherwise popup*/
   handleSubmit = e => {
     /* IDHAR CALL KARNA HAI CHECK PARAM AND CHECK IF TRUE POST IT
-    const {
-      state: { age, spo, heartrate, resrate, drpdownValue, ddimer, cpk, crp, ldh, tropo, ferr, absolute, ctscan, abg }
-    } = this;
-    if(checkParam data={this.state})
-    return true;
+
      have to remove const but post kaise karu when it returns true and buttons ka kaise pass karu in this state?
-    */
+    Just implement the function with the changes which I proposed I have checked the parameter is being passed to the method
+    It should work fine now
+     */
+    /* This is the new code which i added for the correct calling of the function
+    let res;
+   res = checkParam(this.state);
+   console.log("function was executed");
+   */
+   const {
+    state: { age, spo, heartrate, resrate, drpdownValue, ddimer, cpk, crp, ldh, tropo, ferr, absolute, ctscan, abg }
+  } = this;
     try {
       fetch(`${MOCK_SERVICE}`, {
         method: 'POST',
@@ -488,7 +493,6 @@ export class Calculator extends Component {
               Please help us to contribute more by providing your valuable feedback
             </marquee>
           </a>
-
           <div className="information container">
             <div className="ptor">
               Moderate and high risk patients require aggressive monitoring of inflammatory milieu or up triaging.
