@@ -159,13 +159,14 @@ export class Calculator extends Component {
 
 /*idhar call check param and if true returned post req otherwise popup*/
   handleSubmit = e => {
-    /* IDHAR CALL KARNA HAI CHECK PARAM AND CHECK IF TRUE POST IT*/
+    /* IDHAR CALL KARNA HAI CHECK PARAM AND CHECK IF TRUE POST IT
     const {
       state: { age, spo, heartrate, resrate, drpdownValue, ddimer, cpk, crp, ldh, tropo, ferr, absolute, ctscan, abg }
     } = this;
-
-    /*this is how the data is being sent in json format*/
-
+    if(checkParam data={this.state})
+    return true;
+     have to remove const but post kaise karu when it returns true and buttons ka kaise pass karu in this state?
+    */
     try {
       fetch(`${MOCK_SERVICE}`, {
         method: 'POST',
